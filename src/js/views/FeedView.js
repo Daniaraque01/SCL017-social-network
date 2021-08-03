@@ -168,6 +168,8 @@ export default () => {
     const postContainer = post.querySelector('#post-container');
     let editStatus = false;
     let id = '';
+    
+    
 
     onGetPost((querySnapshot) => {
       // console.log('HRE', postContainer.innerHTML.length);
@@ -185,11 +187,14 @@ export default () => {
                 ${post.text}
               </p>  
               <div class="interaction-bar">
-                <img class="like-btn" src="../css/img_app/vector_like.png"></img>
+                <img class="like-btn" id="like-btn" src="../css/img_app/vector_like.png"></img>
                 <img class="btn-edit secondary" src= "../css/img_app/edit.png" data-id="${post.id}"></img>
                 <img class="btn-delete primary" src= "../css/img_app/trash.png"data-id="${post.id}"></img>
               </div>
             </div>`;
+
+        let likeBtn = document.querySelector('#like-btn');
+        
 
         const btnsDelete = document.querySelectorAll('.btn-delete');
         btnsDelete.forEach((btn) => {
