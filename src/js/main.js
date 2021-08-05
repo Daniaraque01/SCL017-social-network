@@ -1,3 +1,4 @@
+/* eslint-disable */ 
 import { someStyling } from './style-manager.js';
 import { router } from './router.js';
 import firebaseFunctions from './firebase-functions.js';
@@ -16,16 +17,27 @@ window.addEventListener('hashchange', () => {
 const auth = firebase.auth();
 auth.onAuthStateChanged((user) => {
   if (user) {
-    const userInfo = user;
-
-    window.location.hash = '#/feed';
-
+    // const userInfo = user;
+    if (!user.emailVerified) {
+      window.location.hash = '#/landing';
+    }
+    console.log(user);
   } else {
     window.location.hash = '#/landing';
     console.log(firebaseFunctions.userInfo());
   }
 });
 
+//  export const obs = () => {
+//   auth.onAuthStateChanged((user) => {
+//     if (user) {
+//       return user;
+//     } else {
+//       window.location.hash = '#/landing';
+//       console.log(firebaseFunctions.userInfo());
+//     }
+//   });
+// }
 // // obtengo los valores de la coleccion usuario
 // // const getUsers = () => firebase.firestore().collection('users').get();
 
