@@ -148,7 +148,7 @@ export default () => {
         
         <div class="tool-bar">
           <img id="text-icon" class="textIcon" src="./css/img_app/vector_text.png"></img>
-          <img id="link-icon" class="linkIcon"src="css/img_app/vector_link.png"></img>
+          <img id="link-icon" class="linkIcon"src="vector_link.png"></img>
           <img id="addImg-icon" class="imgIcon" src="./css/img_app/vector_image.png"></img>
         </div>  
       </div>
