@@ -148,7 +148,7 @@ export default () => {
         
         <div class="tool-bar">
           <img id="text-icon" class="textIcon" src="./css/img_app/vector_text.png"></img>
-          <img id="link-icon" class="linkIcon"src="./css/img_app/_vector_link.png"></img>
+          <img id="link-icon" class="linkIcon"src="css/img_app/vector_link.png"></img>
           <img id="addImg-icon" class="imgIcon" src="./css/img_app/vector_image.png"></img>
         </div>  
       </div>
@@ -337,7 +337,7 @@ export default () => {
               </p>  
               <div class="interaction-bar">
                 <div>
-                  <img class="btn-like" id="btn-like" src="./css/img_app/_vector_like.png" data-id="${post.id}"></img>
+                  <img class="btn-like" id="btn-like" src="./css/img_app/vector_like.png" data-id="${post.id}"></img>
                   <p class="number-likes" id="counter-likes" data-id="${post.id}">${post.like.length} </p>
                 </div>
                 <a><img class="btn-edit" id="edit-post" src= "./css/img_app/edit.png" data-id="${post.id}"></img></a>
